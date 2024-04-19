@@ -14,6 +14,9 @@
 		611198792BD08D0A006E4E59 /* _DModelPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611198782BD08D0A006E4E59 /* _DModelPickerTests.swift */; };
 		611198832BD08D0A006E4E59 /* _DModelPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611198822BD08D0A006E4E59 /* _DModelPickerUITests.swift */; };
 		611198852BD08D0A006E4E59 /* _DModelPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611198842BD08D0A006E4E59 /* _DModelPickerUITestsLaunchTests.swift */; };
+		611198942BD093F1006E4E59 /* sneaker_pegasustrail.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 611198922BD093F0006E4E59 /* sneaker_pegasustrail.usdz */; };
+		611198952BD093F1006E4E59 /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 611198932BD093F1006E4E59 /* pancakes.usdz */; };
+		611198972BD0942D006E4E59 /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 611198962BD0942D006E4E59 /* toy_biplane_idle.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		6111987E2BD08D0A006E4E59 /* 3DModelPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DModelPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		611198822BD08D0A006E4E59 /* _DModelPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DModelPickerUITests.swift; sourceTree = "<group>"; };
 		611198842BD08D0A006E4E59 /* _DModelPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _DModelPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		611198922BD093F0006E4E59 /* sneaker_pegasustrail.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_pegasustrail.usdz; sourceTree = "<group>"; };
+		611198932BD093F1006E4E59 /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
+		611198962BD0942D006E4E59 /* toy_biplane_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane_idle.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				611198672BD08D08006E4E59 /* AppDelegate.swift */,
+				611198912BD093A4006E4E59 /* Models */,
 				611198692BD08D08006E4E59 /* ContentView.swift */,
 				6111986B2BD08D0A006E4E59 /* Assets.xcassets */,
 				6111986D2BD08D0A006E4E59 /* Preview Content */,
@@ -125,6 +132,16 @@
 				611198842BD08D0A006E4E59 /* _DModelPickerUITestsLaunchTests.swift */,
 			);
 			path = 3DModelPickerUITests;
+			sourceTree = "<group>";
+		};
+		611198912BD093A4006E4E59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				611198932BD093F1006E4E59 /* pancakes.usdz */,
+				611198962BD0942D006E4E59 /* toy_biplane_idle.usdz */,
+				611198922BD093F0006E4E59 /* sneaker_pegasustrail.usdz */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +248,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611198942BD093F1006E4E59 /* sneaker_pegasustrail.usdz in Resources */,
+				611198972BD0942D006E4E59 /* toy_biplane_idle.usdz in Resources */,
 				6111986F2BD08D0A006E4E59 /* Preview Assets.xcassets in Resources */,
 				6111986C2BD08D0A006E4E59 /* Assets.xcassets in Resources */,
+				611198952BD093F1006E4E59 /* pancakes.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

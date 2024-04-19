@@ -9,8 +9,35 @@ import SwiftUI
 import RealityKit
 
 struct ContentView : View {
+    var models: [String] = {
+        let fileManager = FileManager.default
+        
+        guard let path = Bundle.main.resourcePath, let files = try? fileManager.contentsOfDirectory(atPath: path) else {
+            return []
+        }
+        var availableModels: [String] = []
+        
+        for fileName in files where fileName.hasSuffix("usdz") {
+               
+            let modelName = fileName.replacingOccurrences(of: ".usdz", with: "")
+      
+            availableModels.append(modelName)
+        }
+        print(availableModels)
+        return availableModels
+    }()
+    
+    
+    
+    
+    //["pancakes", "toy_biplane_idle", "sneaker_pegasustrail"]
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        ZStack(alignment: .bottom) {
+            ARViewContainer().edgesIgnoringSafeArea(.all)
+            
+            ModelPickerView(models: models)
+        }
+     
     }
 }
 
@@ -39,6 +66,34 @@ struct ARViewContainer: UIViewRepresentable {
     
     func updateUIView(_ uiView: ARView, context: Context) {}
     
+}
+
+struct ModelPickerView: View {
+    var models: [String]
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 25) {
+                ForEach(0..<self.models.count) { model in
+                    if let image = UIImage(named: models[model]) {
+                        
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .padding()
+                        })
+                       
+                    }
+                  
+                }
+            }.background(Color.gray)
+        }
+    }
 }
 
 #Preview {
